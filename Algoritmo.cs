@@ -26,5 +26,22 @@ public class Algoritmo
     {
         // TODO: Implementar el algoritmo de Bubble Sort tradicional
 
+         if (arr == null || arr.Length < 2) return;
+
+        int n = arr.Length;
+        // Implementación tradicional de Bubble Sort según el pseudocódigo
+        for (int i = 0; i < n - 1; i++)
+        {
+            for (int j = 0; j < n - i - 1; j++)
+            {
+                if (arr[j] > arr[j + 1])
+                {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
     }
 }
+
