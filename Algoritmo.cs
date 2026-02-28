@@ -3,7 +3,6 @@ using System.Linq; // Necesario para Enumerable y ToArray()
 
 public class Algoritmo
 {
-
     public int[] GenerarNumeros(int n)
     {
         // Semilla fija (42) garantiza que todos los alumnos ordenen la misma secuencia
@@ -22,21 +21,19 @@ public class Algoritmo
         }
         return true;
     }
-}
 
     public void BubbleSort(int[] arr)
     {
-        // Validación de seguridad inicial
         if (arr == null || arr.Length < 2) return;
 
         int n = arr.Length;
+        // Implementación tradicional de Bubble Sort según el pseudocódigo
         for (int i = 0; i < n - 1; i++)
         {
             for (int j = 0; j < n - i - 1; j++)
             {
                 if (arr[j] > arr[j + 1])
                 {
-                    // Intercambio (Swap)
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
@@ -44,6 +41,4 @@ public class Algoritmo
             }
         }
     }
-    
-       
-  
+}
